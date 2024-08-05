@@ -3,8 +3,8 @@ package org.otus.irvind.second
 object Main {
   def main(args: Array[String]): Unit = {
     val experiments = (1 to 10000).toList.map({_ => new Experiment()})
-    val result = experiments.map((exp) => exp.run())
-      .map((boolRes) => if (boolRes) 1 else 0)
+    val result = experiments.map(exp => exp.run())
+      .map(boolRes => if (boolRes) 1 else 0)
     val resultSum = result.sum.toDouble
     val prob = resultSum / 10000
     // Точное значение вероятности вытащить хотя бы один белый шарик = 0.8
