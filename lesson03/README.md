@@ -10,8 +10,8 @@ lesson03
 
 1) Запустить docker compose в директории docker_hive
    
-   cd docker_hive
-   docker compose up -d
+       cd docker_hive
+       docker compose up -d
 
 2) Определить id контейнера hive-server и назначить его переменной $HIVE_CONTAINER
 
@@ -19,20 +19,20 @@ lesson03
 
 4) Загрузить файлы в контейнер
    
-   cd docker_hive/data
-   sudo docker cp critic_reviews.csv $HIVE_CONTAINER:/tmp
-   sudo docker cp movies.csv $HIVE_CONTAINER:/tmp
-   sudo docker cp user_reviews.csv $HIVE_CONTAINER:/tmp
-   cd ..
-   sudo docker cp create_db.sql $HIVE_CONTAINER:/tmp
+       cd docker_hive/data
+       sudo docker cp critic_reviews.csv $HIVE_CONTAINER:/tmp
+       sudo docker cp movies.csv $HIVE_CONTAINER:/tmp
+       sudo docker cp user_reviews.csv $HIVE_CONTAINER:/tmp
+       cd ..
+       sudo docker cp create_db.sql $HIVE_CONTAINER:/tmp
 
 5) Зайти в контейнер
 
-   sudo docker compose exec hive-server bash
+       sudo docker compose exec hive-server bash
 
 6) Выполнить скрипт
 
-   /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_db.sql
+       /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000 -f /tmp/create_db.sql
 
 
 
