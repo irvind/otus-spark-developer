@@ -13,9 +13,9 @@ lesson03
        cd docker_hive
        docker compose up -d
 
-2) Определить id контейнера hive-server и назначить его переменной $HIVE_CONTAINER
+2) Определить id контейнера `hive-server` и назначить его переменной `$HIVE_CONTAINER`
 
-3) Скачать датасет в директорию docker_hive/data (из kaggle либо с Яндекс.Диск - https://disk.yandex.ru/d/8LAAi2XlCQ_hvw)
+3) Скачать датасет в директорию `docker_hive/data` (из kaggle либо с Яндекс.Диск - https://disk.yandex.ru/d/8LAAi2XlCQ_hvw)
 
 4) Загрузить файлы в контейнер
    
